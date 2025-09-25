@@ -1,3 +1,22 @@
+# Quarto
+/.quarto/
+.Rproj.user
+*.csv
+!data/jeuDeDonnees_test_param.csv
+*.xls
+*xlsx
+*.html
+!_extensions/insee-clair/*.html
+*_files/
+*.tex
+*.pdf
+*.log
+*.sty
+*.docx
+*.odt
+_output/
+!modulesCompl/*
+
 # History files
 .Rhistory
 .Rapp.history
