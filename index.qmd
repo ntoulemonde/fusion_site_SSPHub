@@ -1,17 +1,17 @@
 ---
-title: "Titre de la présentation sur deux lignes ou trois lignes"
-subtitle: "Sous titre de la présentation"
-# institute: INSEE
-# author: Vous
-date: today
-date-format: "DD/MM/YYYY"
-description: |
-  template de support de présentation interactif intégrant la charte graphique de l'Insee
+title: "Comparaison avec les autres sites référencés par Eurostat et évolution du site SSPHub"
+
+author: 'Nicolas Toulemonde'
+date: "29/09/2025"
+
+
+# description: |
+#   template de support de présentation interactif intégrant la charte graphique de l'Insee
 
 slide-tone: false # for blind readers
 chalkboard: false # press the B key to toggle chalkboard
 jump-to-slide: true #press "g" to jump and the number of slide
-mouse-wheel: false
+mouse-wheel: true
 transition: slide
 fig-cap-location: bottom
 
@@ -19,116 +19,351 @@ embed-resources: false
 
 custom-toc: true
 
-# multiplex: true
-execute:
-  echo: false
-  warning: false
-  cache: false
-editor:
-  render-on-save: true
-
-params:
-  annee: "2023"
-  codeDepartement: "87"
-  codeRegion: "75"
-  typeEquipement: "G103"
 ---
 
-# Titre de niveau 1 {#chapters_0 .backgroundTitre_bleu}
+# Comparaison des autres sites de statistiques expérimentales
 
-:::{.logoTopRightTitre}
-![](img/logo_Regions/LOGOS_NOUVELLE-AQUTAINE_SIGNATURE_CMJN.jpg)
+## Résumé 
+
+Comparaison de 4 sites d'autres INS (DE, IT, BE, NL) listés sur le sites de statistiques expérimentales de [Eurostat](https://ec.europa.eu/eurostat/web/experimental-statistics/overview/european-statistical-system)
+
+::::: columns
+::: {.column width="50%"}
+**Ce que les autres ont et le site SSPHub n'a pas** <br> 
+
+- existe en **anglais** <br>
+- téléchargement des **données produites** <br>
+- présentation stable par projet, avec une page par projet permettant de savoir ce qui a été fait et est encore utilisé
 :::
 
-## Titre de niveau 2 {#section_0_1 .backgroundStandard_bleu}
+::: {.column width="50%"}
+**Ce que le SSPLab a et les autres non** <br> 
 
-:::{.enteteAvecTitre}
-titre de niveau 1
+- Beaucoup de publication **open source** <br>
+- Une vision plus large que les **seules statistiques expérimentales** (croisement de données administratives, webscrapping) et tournée vers l'innovation méthodologique 
+
+:::
+:::::
+
+![](eurostat.png){fig-align="center"}
+
+
+## Belgique - [Statbel](https://statbel.fgov.be/en/themes/datalab)
+
+::::: columns
+::: {.column width="55%"}
+![](statbel_rda.png)
 :::
 
-:::{.logoTopLeftStandard}
-![](img/logo_Regions/LOGOS_NOUVELLE-AQUTAINE_SIGNATURE_CMJN.jpg)
+::: {.column width="45%"}
+-   une structure stable en trois onglets (pas toujours remplis) avec un descriptif et la présentation des principaux résultats avec des graphiques
+-   17 présentations de statistiques expérimentales par Statbel
+
+:::
+:::::
+
+---
+
+::::: columns
+::: {.column width="30%"}
+**Points forts** 
+
+- existe en anglais 
+- téléchargement des données produites
 :::
 
+::: {.column width="70%"}
+**Améliorations** 
 
-### Titre de niveau 3
+- Pas de publication open source 
+- une vision plus large des statistiques expérimentales, incluant le croisement de données administratives (un seul à partir de nouvelles données trouvé sur 8 projets)
+-   centré sur des statistiques expérimentales plus que sur des méthodes ou données innovantes : 1 seul projet sur les 10 serait considéré comme de l'innovation à l'Insee
 
-#### Titre de niveau 4
+:::
+:::::
 
-##### Titre de niveau 5
+### Quelques exemples belges
 
-###### Titre de niveau 6
+-   Carroyage de la population : [Grid à mailles variables, décembre 2024](https://statbel.fgov.be/fr/themes/datalab/grid-mailles-variables) ou [proximité d'infrastructure essentielle](https://statbel.fgov.be/fr/themes/datalab/decoupages-geographiques): carroyage de la population belge et proximité (5km, 10km, 20km) d'une infrastructure dite essentielle
+-   [Revenu disponible administratif, novembre 2024](https://statbel.fgov.be/fr/themes/datalab/revenu-disponible-administratif#news) : le but est de calculer un revenu médian par commune à partir des registres légaux de population
+-   [Statistiques sur les unités établissements, juin 2024](https://statbel.fgov.be/fr/themes/datalab/statistiques-sur-les-unites-etablissements) : le but est de répartir l'emploi au niveau de l'établissement et non agrégé au niveau de l'établissement mère, afin d'avoir une répartition géographique des emplois plus fine au niveau national
 
+---
 
-- liste de niveau 1
-  - liste de niveau 2
-    - liste de niveau 3
-      - liste de niveau 4
-        - liste de niveau 5
-          - liste de niveau 6
+### Autres exemples de statistiques expérimentales
 
-::: {.notes}
-Taper "s" sur le clavier pour ouvrir le mode speaker view. Autoriser l'ouverture de la fenêtre bloquée la première fois par firefox. Fermer la fenêtre qui s'ouvre. Puis retaper sur "s" pour voir apparaitre les notes sur cette slide.
+-   [Entrepreneurs indépendants, mars 2025](https://statbel.fgov.be/fr/themes/datalab/entrepreneurs-independants) : estimation annuelle des entrepreneurs par croisement de données administratives
+-   [Données des plateformes dans le secteur du tourisme résidentiel, septembre 2024](https://statbel.fgov.be/fr/themes/datalab/donnees-des-plateformes-dans-le-secteur-du-tourisme-residentiel) : suivi du nombre de réservation en lgien sur 4 plateformes (Airbnb, Booking.com, Expedia Group et TripAdvisor, reçues via Eurostat). Potentiel usage de webscrapping et de reconnaissance de texte et de photos
+-   [Accident selon le type de véhicule, juillet 2024](https://statbel.fgov.be/fr/themes/datalab/accidents-selon-le-type-de-vehicule) : estimation plus fine des types de véhicules impliqués dans les accidents par croisement entre deux bases administratives belges
+-   [Possession de voiture par ménage, septembre 2023](https://statbel.fgov.be/fr/themes/datalab/possession-de-voitures-par-menage) : croisement de bases administratives pour déterminer le nombre de voitures par ménages. La statistique, validée en interne et externe, devient officielle.
+-   [Chiffres mensuels sur le marché du travail, avril 2024](https://statbel.fgov.be/fr/themes/datalab/chiffres-mensuels-sur-le-marche-du-travail) : chiffres obtenus à partir enquête de Statbel
+-   [Census enseignement, septembre 2021](https://statbel.fgov.be/fr/themes/datalab/datalab-census-enseignement) : croisement de bases de données administratives (des communautés et régions) pour des statistiques plus fine sur le niveau d'enseignement des résidents belges
+
+## Allemagne - [Destatis](https://www.destatis.de/EN/Service/EXSTAT/_node.html) 
+
+Publication de données innovantes en méthode et source de données sous trois catégories :
+
+-   **short-term indicators** specifically developed to represent economic developments as early as possible.
+
+-   **other indicator** to reflect current non-economic developments that are relevant for society.
+
+-   **workshop reports** on projects that tested new methods of data collection or evaluation, including experimental special evaluations and feasibility studies
+
+::::: columns
+::: {.column width="70%"}
+**Points forts** 
+
+- 5/8 indicateurs sur 12/14 rapports en anglais 
+- fourniture de données téléchargeables
+- rapport sur l'expérimentation faite, quelque soit son résultat
 :::
 
+::: {.column width="30%"}
+**Améliorations** 
 
-## Titre transparent {#section_0_2 .backgroundStandard .titreTransparent data-menu-title="Slide sans titre ni numérotation"}
+- peu d'innovation méthodologique
 
-:::{.enteteAvecTitre}
-titre de niveau 1
+:::
+:::::
+
+---
+
+### Quelques exemples allemands
+
+-   [Index de consommation de produit alimentaire, 2024](https://www.destatis.de/DE/Service/EXSTAT/Datensaetze/warengruppen-einzelhandel_methodik.html) : mise à disposition donnée haute fréquence de consommation de produits alimentaires à partir des données transmises par des grandes enseignes (jusque fin 2024)
+
+-   [Labor market indicator: LinkedIn Hiring Rate](https://www.destatis.de/EN/Service/EXSTAT/Datensaetze/labour-market.html) : estimation du taux de personne indiquant un nouvel employeur dans Linkedin, et comparaison avec données "classiques" par secteur
+
+-   [Truck toll mileage](https://www.destatis.de/EN/Service/EXSTAT/Datensaetze/truck-toll-mileage.html) : donner un indicateur de production industrielle à partir des données de péage de camions routiers obtenus par le Ministère des Transports allemand
+
+-   [Mobility indicators based on mobile network data](https://www.destatis.de/EN/Service/EXSTAT/Datensaetze/mobility-indicators-mobilephone.html)
+
+-   [Usage d'images satellites pour les statistiques de BTP](https://www.destatis.de/DE/Service/EXSTAT/Datensaetze/bautaetigkeit-eo4constat.html) : en lien avec le programme EO4ConStat de la CE et l'ING allemand, usage d'images satellites pour construire indicateur d'activité du secteur des BTP
+
+-   [Part du travail des personnes protégées par appariement statistique](https://www.destatis.de/DE/Service/EXSTAT/Datensaetze/erwerbsbeteiligung_schutzsuchende.html#1136056) à partir d'une base administrative et de données d'enquête sur les étrangers présents en Allemagne
+
+## Italie - [Istat](https://www.istat.it/en/announcement-and-analisys/experimental-statistics/) {.smaller}
+
+Publication de données innovantes en méthode et source de données sous quatre catégories :
+
+-   **Non-standard classifications** produced on the basis of the official taxonomies defined at an international level and currently used by Istat, or proposed as experimental within analysis and research activities based on microdata processing
+-   **New indicators** produced through the integration of a multiplicity of official and non-official sources; in this case, the focus is on phenomena under investigation rather than on statistical sources used to describe them
+-   **Interpretation frameworks and analysis** of complex phenomena obtained through the integration of official sources
+-   Results of **experiments on Big Data**, characterised, by their very nature, by the use of non-official sources.
+
+::::: columns
+::: {.column width="60%"}
+**Points forts** 
+
+- environ 2/3 publiés aussi en anglais  
+- fourniture de données téléchargeables 
 :::
 
+::: {.column width="40%"}
+**Améliorations** 
+
+- peu d'innovation méthodologique
+:::
+:::::
+
+### Quelques exemples italiens
+
+-   [indicateur d'accident grâce à open street map, 2025](https://www.istat.it/en/experimental-statistic/use-of-the-open-street-map-to-calculate-indicators-for-road-accidents-on-the-italian-roads-year-2023/) : calcul d'indicateur d'accident en prenant en compte l'origine de la voiture, le nombre de routes par région
+
+-   [Mesure de la municipalité, 2025](https://www.istat.it/statistica-sperimentale/aggiornamento-degli-indicatori-del-sistema-informativo-a-misura-di-comune/) (*italien* ): publication d'un tableau de bord des principales données régionalisées jusqu'au niveau communal [ici](https://public.tableau.com/app/profile/istat.istituto.nazionale.di.statistica/viz/amisuradiComune_2025/Storia1?publish=yes)
+
+## Pays-Bas - [CBS](https://www.cbs.nl/en-gb/about-us/innovation) {.smaller}
+
+Site pour **mettre en valeur** l'innovation à CBS, aussi bien en terme de méthode que de données innovantes. Publication sous la forme de __Beta products__ ou d'articles de recherche. 
+
+7 domaines innovants de travail, dont : 
+
+- Extraction d'information (textuelle __text mining, NLP__, image, machine learning ...) et stratégie gouvernementale de l'IA
+- Simplification de la collecte lors d'enquêtes (application, traitement de données personnelles) et modèles statistiques
+- Préserver la confidentialité, en lien avec le monde universitaire (__federated or distributed learning, multiparty computation__) ou la création de données synthétiques 
+- Data engineering (réupération, integration, management, securité)
+
+::::: columns
+::: {.column width="50%"}
+**Points forts**  
+
+- quelques articles en anglais (3/10) 
+- usage plus intensif de nouvelles méthodes (ML, NLP)
+:::
+
+::: {.column width="50%"}
+**Améliorations**  
+
+- 2 beta produits transformés en production
+:::
+:::::
+
+---
+
+### Quelques exemples néerlandais {.smaller}
+
+-   [Indice de prix à la consommation](https://www.cbs.nl/en-gb/about-us/innovation/successful-innovations/the-consumer-price-index) : usage de données de caisse pour calcul de l'IPC, utilisé en production
+-   [Offres d'emploi en ligne](https://www.cbs.nl/nl-nl/over-ons/onderzoek-en-innovatie/succesvolle-innovaties/online-vacatures) : usage depuis 2022 de données sur les postes vacants en ligne pour enrichir les statistiques sur les postes vacants, utilisé en production
+-   [Investigative study on new statistics on home delivery services](https://www.cbs.nl/en-gb/about-us/innovation/project/investigative-study-on-new-statistics-on-home-delivery-services) : statistiques expérimentales, financée par l'UE, sur le secteur de la livraison à domicile (PPP avec les entreprises pour les définir, expertiser quelles données sont disponibles sans enquête)
+-   [Tableau de bord des facteurs de risques liés à la pauvreté, 2024](https://www.cbs.nl/nl-nl/maatwerk/2024/03/dashboard-risicofactoren-voor-transitie-uit-armoede) : Estimer le risque de devenir pauvre à partir de données administratives et de ML
+-   [Calculer la probabilité de déménagement par des bases administratives et non plus par enquête, 2015-2018](https://www.cbs.nl/en-gb/about-us/innovation/project/use-machine-learning-to-estimate-chance-of-moving) : constitution, à partir du registre des PP et par ajout d'événements extérieurs d'état civil, de la probabilité de déménager dans les deux ans. Le meilleur modèle entrainé a donné des résultats similaires à l'enquête 
+
+
+
+
+# Propositions
+
+## Vue générale des propositions {.titreTransparent .smaller}
 
 ::::{.rehausserContenuSansTitre}
+[**Principes déjà validés en échanges bilatéraux (propositions concrètes ci-après)**]{.green}
 
-[Exercice :]{.bold}
+1. Publier **une page par projet** avec un tableau récapitulatif défini et si-besoin des détails en dessous, abondé par chaque personne en charge du projet. 
 
-:::{.listeSansPuceNiveau1}
-- [Slide avec titre de niveau 2 caché]{.puceListFleche}
+2.  **Fusionner la notion de SSPHub et SSPLab** pour faire profiter nativement des projets en cours à tout le monde : le site du SSPLab est le site du SSPHub, le site du SSPHub est le side du SSPLab
+
+3. **Abandonner l'[ancien site ssplab](https://ssplab.lab.sspcloud.fr/)** et rapatrier les contenus encore à jour sur le site SSPHub
+
+=> Ces propositions sont intégrées dans une version provisoire du [site SSPHub](https://github.com/InseeFrLab/ssphub/tree/fusion_site_ssplab)
+
+
+[**Autres**]{.grey}
+
+4. Traduire les pages de blog en **anglais** (plus moyen terme)
+
+
+[**Questions ouvertes à trancher :**]{.orange}
+
+1. Devenir de la [page transverse](https://intranet.insee.fr/jcms/c_2004553/fr/methodologie-et-innovation-statistique) "Méthodologie et innovation statistique" de la DMCSI  => proposition de **renvoyer vers la page du SSPHub les pages reprises sur le site** mais de garder les autres pages, qui dépendent d'autres unités de la DMCSI
+
+2. deux site de code : Que faire du **gitlab du SSPLab**, qui est passé sur Github ?
+
+
+**Être recensé sur le site Eurostat**
+
+Une fois cela fait, signaler à Eurostat l'existence du site et le faire recenser sur leur site de statistiques expérimentales
+
+::::
+
+## Rapatrier l'ancien site SSPHub {.smaller}
+
+- Pour chaque ressource du site : 
+    - rapatriement sous forme de poste de blog dans un format standardisé ou d'événement
+    - suppression, si l'article est technologiquement dépassé (ex : [Exploration des données avec GEPHI](https://ssplab.lab.sspcloud.fr/blog/article/exploration-des-donnees-avec-gephi/), [données en réseau](https://ssplab.lab.sspcloud.fr/blog/article/donnees-en-reseau/), [données groupées](https://ssplab.lab.sspcloud.fr/blog/article/donnees-groupees-effets-aleatoires-vs-effets-fixes/))
+- Proposition d'intégrer 28 nouveaux contenus et de supprimer 19 pages. Parmi ces contenus, 
+    - 13 contenus en doublon avec la reprise de l'intranet
+    - du contenu de blog : mapreduce, statistiques expérimentales sur le logement, disparités territoriales de consommation d’aliments gras sales et sucres ...
+    - des anciens événements (funathons 2021 et 2022)
+    - des partenaires présent sur l'ancien intranet et pas repris sur le SSPHub
+
+
+| [ancien site ssplab](https://ssplab.lab.sspcloud.fr/) | No de pages |
+| --      |        -        |
+| **Total pages présentes**     | **59** |
+|Ne pas prendre sur site SSPHub	| 19    |
+| A intégrer                    | 28    |
+|Déjà présent                   |	12   |
+
+Détails par page dans ce [tableur Grist](https://grist.numerique.gouv.fr/o/docs/adrtdfm7XvFB/Fusion-site-SSPHub?utm_id=share-doc)
+
+--- 
+
+**Vue des propositions de page**
+
+::: {.panel-tabset}
+
+### Funathons
+
+![](img/funathon.png)
+
+### Partenaires
+
+![](img/partenaires.png)
+
 :::
 
-:::{.callout-note}
-Sur une page standard, il vaut mieux mettre un titre de niveau 2 et le cacher que de ne pas en mettre du tout. Si on n'en met pas, ça fait remonter l'entête avec titre de la slide car ce dernier est positionné par rapport au titre de niveau 2.
+
+
+## Rapatrier les pages de l'intranet DMCSI
+
+- Décision sur tous les onglets de la page Méthode et innovation statistique de [l'intranet DMCSI](https://intranet.insee.fr/jcms/c_2004553/fr/methodologie-et-innovation-statistique) 
+
+|                                                     | No d'éléments |
+| -----                                               |        -        |
+| **Total éléments présents**                         |    **58**       |
+| *dont hors SSPLab (Unité qualité, etc)*             | *23*            |
+| **Total éléments présents SSPLab**                  | **35**          |
+|    Ne pas prendre sur site SSPHub     	            | 4               |
+|    A intégrer 	                                    | 26              |
+|    *dont à intégrer en doublon avec l'ancien site*  | *13*            |
+|    Déjà présent                                     |	5               |
+
+
+- Rapatriement de tous les projets listés sur le site SSPHub sous un format standardisé
+
+- **Au total (intranet et ancien site), 41 pages/éléments rapatriés sur le site SSPHub** : 26 de l'intranet et 15 de l'ancien site. 
+
+---
+
+### Proposition de page par projet
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+![](img/modele_ebf.png)
+
 :::
 
-:::{.listeSansPuceNiveau1}
-- Pour ré-hausser le contenu de votre slide si celle-ci est chargée, vous pouvez encapsuler le contenu de la slide en utilisant les classes CSS suivantes sur une div (encadrement avec `::::`) :
-  - `.rehausserContenuSansTitre` si vous ne mettez pas de titre à votre section (comme c'est le cas ici)
-  - `.rehausserContenuAvecTitre` si vous mettez un titre de section visible.
+::: {.column width="50%"}
+
+- Mots clés pour pouvoir chercher facilement sur le site
+- Structure minimale pour tous les projets comprenant
+    - Explications
+    - Sponsor 
+    - Equipe
+    - Point de contact
+    - Résultats
+    - Lien vers le code
+- Une partie détaillée en dessous à la main
+- Chaque page est de la responsabilité de la personne responsable du projet
+
 :::
 
 ::::
-          
-## {#pageDeFin data-menu-title="Page finale" .unnumbered .backgroundPageFinale}
+
+*Cf.* proposition de site 
+
+
+## Les git {.smaller}
+
+Les repos des projets sur intranet, etc sont sur trois types de logiciels Git :
+
+| Git                                               | Nombre de projets  | Liens repos |
+| --                                                |        -        |  ----   |
+| https://git.lab.sspcloud.fr/ssplab/               |     4           | [https://git.lab.sspcloud.fr/ssplab/rsvero2/rsvero2](https://git.lab.sspcloud.fr/ssplab/rsvero2/rsvero2) <br> [https://git.lab.sspcloud.fr/ssplab/signes-de-vie](https://git.lab.sspcloud.fr/ssplab/signes-de-vie) <br> [https://git.lab.sspcloud.fr/ssplab/action-coeur-ville](https://git.lab.sspcloud.fr/ssplab/action-coeur-ville) <br> [https://git.lab.sspcloud.fr/ssplab/bdf](https://git.lab.sspcloud.fr/ssplab/bdf) |
+| https://gitlab.insee.fr/ssplab/                   | 1               | [https://gitlab.insee.fr/ssplab/aiee2](https://gitlab.insee.fr/ssplab/aiee2) et [https://gitlab.insee.fr/ssplab/aiee2-web](https://gitlab.insee.fr/ssplab/aiee2-web) |
+| https://github.com/InseeFrLab/ssphub              |   3             | |
+| *Pi, projets dont les repo ne sont pas indiqués*         |   *8*             | |
+
+
+**Proposition : **
+
+- repos git.lab.sppcloud => les rapatrier sur Github/InseeFrLab 
+- repos gitlab.insee.fr => vérifier absence de données internes et les rapatrier sur Github/InseeFrLab
+
+# Conclusions {#pageDeFin .unnumbered .backgroundPageFinale}
 
 :::: {.columns .coordonneesFinales}
-
+ 
 ::: {.column .coordonnees width=50%}
-- Prénom Nom
-- fonction
-- Service
-- Numéro de téléphone
-- Mél
+- Nicolas TOULEMONDE
+- SSPLab
+- DMCSI
+- nicolas.toulemonde@insee.Fr
 :::
-
+ 
 ::: {.column .droite width=40%}
 :::
-
+ 
 ::::
-
-
-<!-- Ajout des autres parties du support -->
-
-{{< include 01_styleParDefaut.qmd >}}
-
-{{< include 02_modulariteSupport.qmd >}}
-
-{{< include 03_parametresExecution.qmd >}}
-
-{{< include 04_fenetreModale.qmd >}}
-
-{{< include 05_exportPdf.qmd >}}
-
-{{< include 06_documentation.qmd >}}
-
-

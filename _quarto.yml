@@ -6,15 +6,12 @@ project:
     - "css/"
     - "data/"
     - "img/"
-    - "videos/"
     - "js/"
-    - "R/"
     - "modulesCompl/"
     - "*.html"
     - "*_files/"
   render:
     - "*.qmd"
-    - "!R/data.qmd"
     
 format:
   insee-clair-revealjs: default
