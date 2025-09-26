@@ -1,6 +1,6 @@
 project:
-  title: "Présentation quarto-Insee"
-  output-dir: _output
+  title: "Présentation fusion site SSPHub"
+  output-dir: docs
   resources:
     - "_extensions/"
     - "css/"
@@ -11,7 +11,7 @@ project:
     - "*.html"
     - "*_files/"
   render:
-    - "*.qmd"
+    - "index.qmd"
     
 format:
   insee-clair-revealjs: default
