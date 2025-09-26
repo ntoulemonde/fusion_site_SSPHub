@@ -6,7 +6,7 @@
 *.xls
 *xlsx
 *.html
-!index.hmtl
+!index.html
 !_extensions/insee-clair/*.html
 *_files/
 *.tex
