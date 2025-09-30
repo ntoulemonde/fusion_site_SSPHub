@@ -6,7 +6,7 @@
 *.xls
 *xlsx
 *.html
-!index.html
+!docs/*
 !_extensions/insee-clair/*.html
 *_files/
 *.tex
@@ -58,9 +58,6 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
-
-# pkgdown site
-docs/
 
 # translation temp files
 po/*~

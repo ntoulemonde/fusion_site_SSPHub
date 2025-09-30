@@ -18,7 +18,7 @@ fig-cap-location: bottom
 embed-resources: false
 
 custom-toc: true
-
+  output-dir: docs
 ---
 
 # Comparaison des autres sites de statistiques expérimentales

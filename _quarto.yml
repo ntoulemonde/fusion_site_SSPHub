@@ -1,15 +1,12 @@
 project:
   title: "Présentation fusion site SSPHub"
-  output-dir: docs
   resources:
     - "_extensions/"
     - "css/"
-    - "data/"
     - "img/"
     - "js/"
     - "modulesCompl/"
     - "*.html"
-    - "*_files/"
   render:
     - "index.qmd"
     
