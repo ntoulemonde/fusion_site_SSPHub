@@ -15,10 +15,10 @@ mouse-wheel: true
 transition: slide
 fig-cap-location: bottom
 
-embed-resources: false
+embed-resources: true
 
 custom-toc: true
-  output-dir: docs
+
 ---
 
 # Comparaison des autres sites de statistiques expérimentales
@@ -45,14 +45,14 @@ Comparaison de 4 sites d'autres INS (DE, IT, BE, NL) listés sur le sites de sta
 :::
 :::::
 
-![](eurostat.png){fig-align="center"}
+![](img/eurostat.png){fig-align="center"}
 
 
 ## Belgique - [Statbel](https://statbel.fgov.be/en/themes/datalab)
 
 ::::: columns
 ::: {.column width="55%"}
-![](statbel_rda.png)
+![](img/statbel_rda.png)
 :::
 
 ::: {.column width="45%"}
